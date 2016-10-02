@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TwitterBetter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,114 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TwitterBetter_mainBG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wwX-Y3-ViG"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wHp-KO-PHh">
+                                <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vaw-yj-Fz2"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="snn-N9-CaP">
+                                <color key="backgroundColor" white="1" alpha="0.69834735576923079" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Yyt-c1-e0h"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vc0-K2-enk">
+                                <color key="backgroundColor" white="1" alpha="0.7013521634615385" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hyv-hJ-Ghu"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zmg-2R-Pht">
+                                <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="1Dd-ck-FNA"/>
+                                    <constraint firstAttribute="height" constant="30" id="6XK-d2-pSl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xdz-T9-xzR">
+                                <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TwitterBetter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41B-ZZ-ZzY">
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7L-wd-Ghx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3RP-3Q-fhW"/>
+                                    <constraint firstAttribute="width" constant="201" id="z1M-bi-O2o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Already have an account?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="els-HA-EbT">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="SeC-4M-FLe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wwX-Y3-ViG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="04I-8L-ok3"/>
+                            <constraint firstItem="41B-ZZ-ZzY" firstAttribute="leading" secondItem="wHp-KO-PHh" secondAttribute="leading" id="0FB-Kc-aFV"/>
+                            <constraint firstItem="wwX-Y3-ViG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="0GP-yh-Rw0"/>
+                            <constraint firstItem="41B-ZZ-ZzY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="1Zd-fZ-31k"/>
+                            <constraint firstItem="N7L-wd-Ghx" firstAttribute="top" secondItem="els-HA-EbT" secondAttribute="bottom" constant="13" id="25L-p0-e1n"/>
+                            <constraint firstItem="41B-ZZ-ZzY" firstAttribute="trailing" secondItem="wHp-KO-PHh" secondAttribute="trailing" id="8mY-Na-dkT"/>
+                            <constraint firstItem="Xdz-T9-xzR" firstAttribute="leading" secondItem="Zmg-2R-Pht" secondAttribute="trailing" constant="8" symbolic="YES" id="An3-6K-YRG"/>
+                            <constraint firstAttribute="trailing" secondItem="wwX-Y3-ViG" secondAttribute="trailing" id="Dre-Mo-HfC"/>
+                            <constraint firstItem="wwX-Y3-ViG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HLj-Oe-OaY"/>
+                            <constraint firstItem="wHp-KO-PHh" firstAttribute="leading" secondItem="snn-N9-CaP" secondAttribute="leading" id="Kwh-fj-iLY"/>
+                            <constraint firstItem="41B-ZZ-ZzY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="QgJ-Tn-CTL"/>
+                            <constraint firstItem="els-HA-EbT" firstAttribute="leading" secondItem="N7L-wd-Ghx" secondAttribute="leading" id="U5Y-04-Sqs"/>
+                            <constraint firstItem="wwX-Y3-ViG" firstAttribute="centerX" secondItem="41B-ZZ-ZzY" secondAttribute="centerX" id="Wwe-UL-V3P"/>
+                            <constraint firstItem="Vc0-K2-enk" firstAttribute="top" secondItem="snn-N9-CaP" secondAttribute="bottom" constant="10" id="Xzv-0w-Tvx"/>
+                            <constraint firstItem="wHp-KO-PHh" firstAttribute="top" secondItem="41B-ZZ-ZzY" secondAttribute="bottom" constant="14" id="Z39-kN-SqJ"/>
+                            <constraint firstItem="Zmg-2R-Pht" firstAttribute="bottom" secondItem="Xdz-T9-xzR" secondAttribute="bottom" id="ZrV-V2-ach"/>
+                            <constraint firstItem="snn-N9-CaP" firstAttribute="leading" secondItem="Vc0-K2-enk" secondAttribute="leading" id="aEA-QM-ZKB"/>
+                            <constraint firstItem="Vc0-K2-enk" firstAttribute="trailing" secondItem="Xdz-T9-xzR" secondAttribute="trailing" id="bea-zs-vj4"/>
+                            <constraint firstItem="snn-N9-CaP" firstAttribute="trailing" secondItem="Vc0-K2-enk" secondAttribute="trailing" id="c44-jL-U98"/>
+                            <constraint firstItem="wHp-KO-PHh" firstAttribute="trailing" secondItem="snn-N9-CaP" secondAttribute="trailing" id="eh8-gd-bJS"/>
+                            <constraint firstItem="Zmg-2R-Pht" firstAttribute="top" secondItem="Vc0-K2-enk" secondAttribute="bottom" constant="10" id="hJm-5K-TP6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N7L-wd-Ghx" secondAttribute="bottom" constant="317" id="j9T-jn-Wfs"/>
+                            <constraint firstItem="Zmg-2R-Pht" firstAttribute="leading" secondItem="els-HA-EbT" secondAttribute="leading" id="lKp-KU-ouH"/>
+                            <constraint firstItem="Vc0-K2-enk" firstAttribute="leading" secondItem="Zmg-2R-Pht" secondAttribute="leading" id="rtj-QR-3cH"/>
+                            <constraint firstItem="N7L-wd-Ghx" firstAttribute="top" secondItem="Xdz-T9-xzR" secondAttribute="bottom" constant="56" id="uyO-1d-wBR"/>
+                            <constraint firstItem="els-HA-EbT" firstAttribute="top" secondItem="Zmg-2R-Pht" secondAttribute="bottom" constant="13" id="vGe-nS-9Ur"/>
+                            <constraint firstItem="snn-N9-CaP" firstAttribute="top" secondItem="wHp-KO-PHh" secondAttribute="bottom" constant="9" id="yYv-lp-W3q"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TwitterBetter_mainBG.jpg" width="506" height="900"/>
+    </resources>
 </document>

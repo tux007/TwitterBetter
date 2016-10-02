@@ -12,6 +12,7 @@
 		E220106B1DA1B3B400198F8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22010691DA1B3B400198F8C /* Main.storyboard */; };
 		E220106D1DA1B3B400198F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E220106C1DA1B3B400198F8C /* Assets.xcassets */; };
 		E22010701DA1B3B400198F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E220106E1DA1B3B400198F8C /* LaunchScreen.storyboard */; };
+		E22010781DA1C10B00198F8C /* TwitterBetter_mainBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E22010771DA1C10B00198F8C /* TwitterBetter_mainBG.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E220106C1DA1B3B400198F8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E220106F1DA1B3B400198F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E22010711DA1B3B400198F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E22010771DA1C10B00198F8C /* TwitterBetter_mainBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TwitterBetter_mainBG.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				E22010651DA1B3B400198F8C /* AppDelegate.swift */,
 				E22010671DA1B3B400198F8C /* ViewController.swift */,
 				E22010691DA1B3B400198F8C /* Main.storyboard */,
+				E22010771DA1C10B00198F8C /* TwitterBetter_mainBG.jpg */,
 				E220106C1DA1B3B400198F8C /* Assets.xcassets */,
 				E220106E1DA1B3B400198F8C /* LaunchScreen.storyboard */,
 				E22010711DA1B3B400198F8C /* Info.plist */,
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E22010701DA1B3B400198F8C /* LaunchScreen.storyboard in Resources */,
+				E22010781DA1C10B00198F8C /* TwitterBetter_mainBG.jpg in Resources */,
 				E220106D1DA1B3B400198F8C /* Assets.xcassets in Resources */,
 				E220106B1DA1B3B400198F8C /* Main.storyboard in Resources */,
 			);
