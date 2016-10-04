@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--RegisterVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TwitterBetter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RegisterVC" customModule="TwitterBetter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -86,6 +86,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="register_clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L2G-OY-yLs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -119,6 +122,13 @@
                             <constraint firstItem="snn-N9-CaP" firstAttribute="top" secondItem="wHp-KO-PHh" secondAttribute="bottom" constant="9" id="yYv-lp-W3q"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTxt" destination="Vc0-K2-enk" id="03l-2e-k4g"/>
+                        <outlet property="firstnameTxt" destination="Zmg-2R-Pht" id="tNK-bX-eAw"/>
+                        <outlet property="lastnameTxt" destination="Xdz-T9-xzR" id="E6O-hC-5Re"/>
+                        <outlet property="passwordTxt" destination="snn-N9-CaP" id="3Ur-z6-fTZ"/>
+                        <outlet property="usernameTxt" destination="wHp-KO-PHh" id="Vpu-dY-eJN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
