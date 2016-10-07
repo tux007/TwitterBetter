@@ -45,9 +45,15 @@ class RegisterVC: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
         
+        // if incorrect email according to regex
+        if !validateEmail(emailTxt: emailTxt.text!) {
+            alert(error: "Incorrect email", message: "please provide correct email address")
+            return
+        }
+        
         
         // if no text entered
-        if usernameTxt.text!.isEmpty || passwordTxt.text!.isEmpty || emailTxt.text!.isEmpty || firstnameTxt.text!.isEmpty || lastnameTxt.text!.isEmpty || !validateEmail(emailTxt: emailTxt.text!) {
+        if usernameTxt.text!.isEmpty || passwordTxt.text!.isEmpty || emailTxt.text!.isEmpty || firstnameTxt.text!.isEmpty || lastnameTxt.text!.isEmpty {
             
             // red placeholders
             usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSForegroundColorAttributeName:UIColor.red])
@@ -55,8 +61,6 @@ class RegisterVC: UIViewController {
             emailTxt.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName:UIColor.red])
             firstnameTxt.attributedPlaceholder = NSAttributedString(string: "firstname", attributes: [NSForegroundColorAttributeName:UIColor.red])
             lastnameTxt.attributedPlaceholder = NSAttributedString(string: "lastname", attributes: [NSForegroundColorAttributeName:UIColor.red])
-            alert(error: "Incorrect email", message: "please provide correct email address")
-            
             
         // if text is entered
         } else {
