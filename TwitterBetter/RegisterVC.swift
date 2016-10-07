@@ -23,12 +23,31 @@ class RegisterVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
 
     // register button clicked
     @IBAction func register_clicked(_ sender: AnyObject) {
         
+        // Email validation
+        // regex restrictions for email textfield
+        func validateEmail (emailTxt : String) -> Bool {
+            let regex = "[A-Z0-9a-z._%+-]{4}+@[A-Za-z0-9.-]+\\.[A-Za-z]{2}"
+            let range = emailTxt.range(of: regex, options: .regularExpression)
+            let result = range != nil ? true : false
+            return result
+        }
+        
+        // alert message function
+        func alert (error: String, message : String) {
+            let alert = UIAlertController(title: error, message: message, preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
         // if no text entered
-        if usernameTxt.text!.isEmpty || passwordTxt.text!.isEmpty || emailTxt.text!.isEmpty || firstnameTxt.text!.isEmpty || lastnameTxt.text!.isEmpty {
+        if usernameTxt.text!.isEmpty || passwordTxt.text!.isEmpty || emailTxt.text!.isEmpty || firstnameTxt.text!.isEmpty || lastnameTxt.text!.isEmpty || !validateEmail(emailTxt: emailTxt.text!) {
             
             // red placeholders
             usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSForegroundColorAttributeName:UIColor.red])
@@ -36,7 +55,9 @@ class RegisterVC: UIViewController {
             emailTxt.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName:UIColor.red])
             firstnameTxt.attributedPlaceholder = NSAttributedString(string: "firstname", attributes: [NSForegroundColorAttributeName:UIColor.red])
             lastnameTxt.attributedPlaceholder = NSAttributedString(string: "lastname", attributes: [NSForegroundColorAttributeName:UIColor.red])
-           
+            alert(error: "Incorrect email", message: "please provide correct email address")
+            
+            
         // if text is entered
         } else {
             
