@@ -105,7 +105,26 @@ class RegisterVC: UIViewController {
                             if id != nil {
                                 
                                 print(parseJSON)
-                               
+                                
+                                /*
+                                UserDefaults.standard.set(parseJSON, forKey: "parseJSON")
+                                user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
+                                
+                                // go to tabbar / home page
+                                DispatchQueue.main.async(execute: {
+                                    appDelegate.login()
+                                })
+                                */
+                            
+                            // error
+                            } else {
+                                
+                                // get main queue to communicate back to user
+                                DispatchQueue.main.async(execute: {
+                                    let message = parseJSON["message"] as! String
+                                    appDelegate.infoView(message: message, color: colorSmoothRed)
+                                })
+                                return
                                 
                             }
                             
@@ -130,6 +149,14 @@ class RegisterVC: UIViewController {
         }
         
         
+    }
+    
+    
+    // touched screen
+    func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        // hide keyboard
+        self.view.endEditing(false)
     }
     
 }
